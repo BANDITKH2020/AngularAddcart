@@ -1,0 +1,42 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a>
+                <img style="width: 62px; margin-top: 5px;" src="https://img.icons8.com/color/256/shopping-cart-loaded.png" alt="">
+                <h6>All Products</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img style="width: 62px; margin-top: 5px;" src="https://img.icons8.com/color/256/electronics.png" alt="">
+                <h6>Electronics</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img style="width: 62px; margin-top: 5px;" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/256/external-fashion-fashion-week-flaticons-lineal-color-flat-icons-11.png" alt="">
+                <h6>Fashion</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img style="width: 62px; margin-top: 5px;" src="https://img.icons8.com/external-inipagistudio-lineal-color-inipagistudio/256/external-jewelery-financial-literacy-inipagistudio-lineal-color-inipagistudio.png" alt="">
+                <h6>Jewelery</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h5>{{item.title}}</h5>
+                <p>{{item.description}}</p>
+                <p><strong>Price:</strong>${{item.Price}}</p>
+                <button class="btn btn-primary">Add to cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
